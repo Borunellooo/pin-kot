@@ -14,12 +14,10 @@ const Home = () => {
     const listener = (e) => {
 
       if (window.pageYOffset > 100) {
-        console.log("🚀 ~ 100", 100, window.pageYOffset)
         setScrolled(true);
       }
 
       if (window.pageYOffset <= 100) {
-        console.log("🚀 ~ 100", 1010)
         setScrolled(false);
       }
       
