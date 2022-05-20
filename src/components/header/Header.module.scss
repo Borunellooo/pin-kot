@@ -21,8 +21,13 @@
     height: 100px;
 }
 
+.icon_hp:hover {
+    transform: rotate(-180deg);
+    transition: .05s;
+  }
+
 .icon_hp:active {
-    transform: rotate(180deg);
+    transform: rotate(0deg);
     transition: .05s;
   }
 

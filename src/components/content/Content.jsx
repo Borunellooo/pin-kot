@@ -21,8 +21,8 @@ const Content = () => {
 
   return (
     <div className={ s.wrapper_content }>
-      {(!load && !error) && (store || []).map(el => (
-        <div key={ el.id } className={ s.content_cart }>
+      {(!load && !error) && (store || []).map((el, index) => (
+        <div key={ el.id + index } className={ s.content_cart }>
           <h2 className={ s.cart_title }>{el.title}</h2>
           <div className={ s.wrapper_cart_photo }>
             {el.media.photo
