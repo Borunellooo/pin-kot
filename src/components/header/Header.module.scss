@@ -1,0 +1,72 @@
+.wrapper_header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.header {
+    margin-top: 3vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+}
+
+.icon_hp {
+    width: 100px;
+    height: 100px;
+}
+.heading {
+    color: #E8A236;
+    font-size: 5em;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.stripe {
+    background-color: #E8A236;
+    width: 80%;
+    height: 3px;
+    border-radius: 10px;
+    margin-top: 1vh;
+}
+
+.wrapper_favourites {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & p {
+        margin-top: 1vh;
+    }
+
+}
+
+.btn_favourites {
+    cursor: pointer;
+    // margin-top: 1vh;
+    // margin-left: 2vh;
+    width: 5vh;
+    height: 5vh;
+    // padding-right: 18px;
+    background: url(../../image/favourites_icon.png) no-repeat;
+    background-size: 100%;
+    border: #E8A236 2px solid;
+    border-radius: 50px;
+    transition: .4s;
+  }
+  
+  .btn_favourites:hover {
+    background-color: #E8A236;
+  }
+  
+  .btn_favourites:active {
+    color: #1A1A1A;
+    border: #1A1A1A 5px solid;
+    transition: .05s;
+    background-color: #FFF;
+  }
