@@ -10,7 +10,7 @@
 .favourites {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
     width: 100%;
     margin-top: 7vh;
@@ -23,20 +23,19 @@
     justify-content: center;
     align-items: center;
     margin: 0.7vh 0.7vh 0.7vh 0.7vh;
-    width: 40vh;
-    height: 51vh;
+    width: 400px;
+
     border-color: #212121;
     border-style: solid;
     border-width: 2px;
     border-radius: 5px;
     background: #FFF;
+    padding: 10px;
 }
 
 .cart_title{
     color: #212121;
     margin: 0px 10px 10px 10px;
-    width: 95%;
-    height: 5vh;
     font-size: 1.2em;
     text-align: center;
 }
