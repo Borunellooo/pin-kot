@@ -14,9 +14,11 @@ const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 const sagaMiddleware = createSagaMiddleware();
 
+const devtools = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : noop => noop
+
 const store = createStore(
   persistedReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__(
+  devtools(
     applyMiddleware(sagaMiddleware),
   ),
 );
