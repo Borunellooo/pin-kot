@@ -20,6 +20,12 @@
     width: 100px;
     height: 100px;
 }
+
+.icon_hp:active {
+    transform: rotate(180deg);
+    transition: .05s;
+  }
+
 .heading {
     color: #E8A236;
     font-size: 5em;
@@ -48,11 +54,8 @@
 
 .btn_favourites {
     cursor: pointer;
-    // margin-top: 1vh;
-    // margin-left: 2vh;
     width: 5vh;
     height: 5vh;
-    // padding-right: 18px;
     background: url(../../image/favourites_icon.png) no-repeat;
     background-size: 100%;
     border: #E8A236 2px solid;

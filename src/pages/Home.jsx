@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RotateSpinner } from 'react-spinners-kit';
 import { Content } from '../components/content/Content';
@@ -8,6 +8,30 @@ import s from './Home.module.scss'
 import { errorSelector, loadSelector } from '../redux/selectors';
 
 const Home = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const listener = (e) => {
+
+      if (window.pageYOffset > 100) {
+        console.log("🚀 ~ 100", 100, window.pageYOffset)
+        setScrolled(true);
+      }
+
+      if (window.pageYOffset <= 100) {
+        console.log("🚀 ~ 100", 1010)
+        setScrolled(false);
+      }
+      
+    };
+
+    window.addEventListener('scroll', listener);
+
+    return () => {
+      window.removeEventListener('scroll', listener)
+    }
+  }, [])
+
   const load = useSelector(loadSelector)
   const error = useSelector(errorSelector)
 
@@ -41,6 +65,7 @@ const Home = () => {
       </div>
     )
   }
+
   return (
     <div className={ s.wrapper_home }>
       <Header />
@@ -48,6 +73,7 @@ const Home = () => {
         <Content />
         <button className={ s.btn_scroll } onClick={ () => add() } />
       </section>
+      {scrolled && <button className={ s.btn_scroll_up } onClick={ ()=>  window.scrollTo({top: 0, behavior: 'smooth'}) }></button>}
     </div>
   )
 }

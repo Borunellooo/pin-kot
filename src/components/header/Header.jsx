@@ -6,7 +6,9 @@ import s from './Header.module.scss'
 export const Header = () => (
   <header className={ s.wrapper_header }>
     <div className={ s.header }>
-      <img alt="icon_HP" src={ logo } className={ s.icon_hp } />
+      <Link className="link_none" to="/Home">
+        <img alt="icon_HP" src={ logo } className={ s.icon_hp } />
+      </Link>
       <h1 className={ s.heading }>Pin-Kot</h1>
       <div className={ s.wrapper_favourites }>
         <Link className="link_none" to="/favourites">

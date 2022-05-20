@@ -49,3 +49,29 @@
     transition: .05s;
     background-color: #FFF;
   }
+
+  .btn_scroll_up{
+    background: url(../image/btn_pag.png) no-repeat;
+    background-size: 100%;
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    bottom: 50px;
+    right: 50px;
+    border-radius: 50%;
+    border: #E8A236 2px solid;
+    transform: rotate(90deg);
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+  }
+
+  .btn_scroll_up:hover {
+    background-color: #E8A236;
+  }
+  
+  .btn_scroll_up:active {
+    color: #1A1A1A;
+    border: #1A1A1A 5px solid;
+    transition: .05s;
+    background-color: #FFF;
+  }
